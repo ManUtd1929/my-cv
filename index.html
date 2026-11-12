@@ -137,7 +137,14 @@ footer{padding:28px 0 0;color:var(--muted);font-size:.82rem;text-align:center}
   .lang{position:static;margin:0 0 18px}
   .side nav{padding-right:0}
 }
-@media print{.side,.btns{display:none}main{margin:0;padding:0}.rv{opacity:1;transform:none}}
+@media print{
+  *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .side,.lang,.btn[download]{display:none}
+  main{margin:0;padding:0;max-width:none}
+  .rv{opacity:1;transform:none}
+  .card,.mcard,.job{break-inside:avoid}
+  .card:hover,.mcard:hover,.btn:hover{transform:none}
+}
 </style>
 </head>
 <body>
@@ -188,11 +195,11 @@ footer{padding:28px 0 0;color:var(--muted);font-size:.82rem;text-align:center}
   <!-- 1. OVERVIEW -->
   <section id="overview" class="hero rv">
     <div class="avatar">AT</div>
-    <h1>Арман Цатрян<small>Arman Tsatryan</small></h1>
+    <h1>Арман Цатрян</h1>
     <div class="role">Marketing &amp; Data Analytics / AI-Driven Growth Lead</div>
     <p class="lead">Специалист на стыке маркетинга, бизнес-аналитики и AI-автоматизации. Специализируюсь на трансформации данных в рост конверсий, автоматизации операционных и бизнес-процессов с помощью LLM/AI-агентов, а также на построении сквозной аналитики.</p>
     <div class="btns">
-      <a class="btn primary" href="CV Arman Tsatryan.pdf" download><svg class="i"><use href="#dl"/></svg>Скачать PDF-резюме</a>
+      <a class="btn primary" href="CV Arman Tsatryan RU.pdf" download><svg class="i"><use href="#dl"/></svg>Скачать PDF-резюме</a>
       <a class="btn" href="tel:+37477291927"><svg class="i"><use href="#phone"/></svg>Phone</a>
       <a class="btn" href="mailto:arman.tsatryan.7@gmail.com"><svg class="i"><use href="#mail"/></svg>Email</a>
       <a class="btn" href="https://t.me/artsaturyan" target="_blank" rel="noopener"><svg class="i"><use href="#send"/></svg>Telegram</a>
@@ -205,6 +212,16 @@ footer{padding:28px 0 0;color:var(--muted);font-size:.82rem;text-align:center}
     <h2>Технический стек и <span>AI-технологии</span></h2>
     <div class="grid two">
       <article class="card">
+        <h3><span class="ico"><svg class="i"><use href="#target"/></svg></span>Marketing &amp; AdTech</h3>
+        <p>Полный цикл маркетинга: от анализа рынка и постановки целей до стратегии, тактики и мониторинга результатов. Строю маркетинг на данных: каждое решение по каналам, аудиториям и бюджетам опирается на метрики и сквозную аналитику, а не на интуицию.</p>
+        <div class="tags"><span class="tag">Meta Ads Manager</span><span class="tag">PPC / SMM</span><span class="tag">Funnel Analytics</span><span class="tag">CRO</span><span class="tag">CRM</span></div>
+      </article>
+      <article class="card">
+        <h3><span class="ico e"><svg class="i"><use href="#bot"/></svg></span>AI Architecture &amp; Automation</h3>
+        <p>Разработка AI-агентов, интеграция LLM в бизнес-процессы, AI-powered BI агенты, получающие определения метрик до генерации SQL.</p>
+        <div class="tags"><span class="tag">AI Agents</span><span class="tag">LLM Workflows</span><span class="tag">Model Context Protocol (MCP)</span><span class="tag">BI Agents</span><span class="tag">Claude Code</span><span class="tag">AI-to-Database</span></div>
+      </article>
+      <article class="card">
         <h3><span class="ico"><svg class="i"><use href="#db"/></svg></span>Databases &amp; Data Warehousing</h3>
         <p>Объединение разнородных источников данных в едином DWH, сквозная аналитика, сложные SQL-запросы.</p>
         <div class="tags"><span class="tag">PostgreSQL</span><span class="tag">MySQL</span><span class="tag">Google BigQuery</span><span class="tag">SQL</span><span class="tag">DWH</span></div>
@@ -213,16 +230,6 @@ footer{padding:28px 0 0;color:var(--muted);font-size:.82rem;text-align:center}
         <h3><span class="ico e"><svg class="i"><use href="#chart"/></svg></span>Data Analytics &amp; Python</h3>
         <p>Python (Pandas, NumPy, Matplotlib), Power BI, Advanced Excel и маркетинговая аналитика клиентской базы.</p>
         <div class="tags"><span class="tag">Python</span><span class="tag">Pandas</span><span class="tag">NumPy</span><span class="tag">Matplotlib</span><span class="tag">Power BI</span><span class="tag">Advanced Excel</span><span class="tag">RFM</span><span class="tag">LTV / CAC / Churn</span><span class="tag">ABC/XYZ</span><span class="tag">QFD &amp; Kano</span></div>
-      </article>
-      <article class="card">
-        <h3><span class="ico"><svg class="i"><use href="#bot"/></svg></span>AI Architecture &amp; Automation</h3>
-        <p>Разработка AI-агентов, интеграция LLM в бизнес-процессы, AI-powered BI агенты, получающие определения метрик до генерации SQL.</p>
-        <div class="tags"><span class="tag">AI Agents</span><span class="tag">LLM Workflows</span><span class="tag">Model Context Protocol (MCP)</span><span class="tag">BI Agents</span><span class="tag">Claude Code</span><span class="tag">AI-to-Database</span></div>
-      </article>
-      <article class="card">
-        <h3><span class="ico e"><svg class="i"><use href="#target"/></svg></span>Marketing &amp; AdTech</h3>
-        <p>Полный цикл маркетинга: от анализа и целей до тактики и мониторинга результатов.</p>
-        <div class="tags"><span class="tag">Meta Ads Manager</span><span class="tag">PPC / SMM</span><span class="tag">Funnel Analytics</span><span class="tag">CRO</span><span class="tag">CRM</span></div>
       </article>
     </div>
   </section>
@@ -252,6 +259,17 @@ footer{padding:28px 0 0;color:var(--muted);font-size:.82rem;text-align:center}
         </ul>
         <div class="tags"><span class="tag">Meta Ads Manager</span><span class="tag">Autonomous Agents</span><span class="tag">Budget Optimization</span><span class="tag">Creative Testing</span></div>
       </article>
+      <article class="card">
+        <span class="badge">Competitive Intelligence · AI Analytics</span>
+        <h3><span class="ico"><svg class="i"><use href="#target"/></svg></span>AI Competitive Intelligence System</h3>
+        <p>Разработал закрытый мультиязычный веб-сервис, который каждую неделю автоматически собирает и анализирует рекламу в Meta Ads и контент в Instagram 5 ключевых конкурентов.</p>
+        <ul>
+          <li>AI раскладывает каждый креатив на офферы, боли целевой аудитории и ключевые посылы.</li>
+          <li>Формирует недельные отчёты и выявляет долгоиграющие объявления (<span class="metric">30+ дней</span>), то есть проверенные эффективные связки.</li>
+          <li>Исключил ручной сбор данных и ускорил реакцию маркетинга на изменения рынка.</li>
+        </ul>
+        <div class="tags"><span class="tag">Meta Ads Library</span><span class="tag">Instagram</span><span class="tag">LLM-анализ</span><span class="tag">Декомпозиция креативов</span><span class="tag">Недельные отчёты</span><span class="tag">Мультиязычность</span></div>
+      </article>
     </div>
   </section>
 
@@ -280,21 +298,6 @@ footer{padding:28px 0 0;color:var(--muted);font-size:.82rem;text-align:center}
             <div class="mcard"><div class="abbr">Repeat</div><div class="nm">Repeat Purchase Rate</div><p>Разработал метрики повторных продаж и сегментацию по частоте и давности заказов (RFM).</p><div class="acts"><span class="act b">Разработал</span><span class="act o">Оптимизировал</span></div></div>
             <div class="mcard"><div class="abbr">Conv.</div><div class="nm">Lead-to-Customer Conversion</div><p>Проанализировал воронку от лида до оплаты, нашёл потери и перестроил работу поддержки под рыночный спрос.</p><div class="acts"><span class="act b">Анализировал</span><span class="act o">Повышал</span></div></div>
             <div class="mcard"><div class="abbr">CTR · CPA · ROAS</div><div class="nm">Performance-метрики рекламы</div><p>Отслеживаю и оптимизирую эффективность PPC и Meta Ads: аудитории, креативы и бюджеты, в том числе с помощью AI-агентов.</p><div class="acts"><span class="act b">Настроил учёт</span><span class="act o">Оптимизировал</span></div></div>
-          </div>
-          <div class="sub">Ключевые бизнес-трансформации</div>
-          <div class="grid cases">
-            <article class="card" style="background:var(--bg2)">
-              <h3><span class="ico e"><svg class="i"><use href="#headset"/></svg></span>Техподдержка → рост конверсии</h3>
-              <p>На основе глубокого исследования рынка и анализа внутренней БД полностью перестроил отдел технической поддержки и клиентского сервиса под актуальный рыночный спрос. Результат — рост <span class="metric">Lead-to-Customer Conversion Rate</span>.</p>
-            </article>
-            <article class="card" style="background:var(--bg2)">
-              <h3><span class="ico"><svg class="i"><use href="#refresh"/></svg></span>Retention &amp; LTV</h3>
-              <p>Спроектировал метрики повторных продаж, <span class="metric">LTV</span> и <span class="metric">Churn Rate</span>. Разработал и провёл таргетированные win-back кампании по реактивации ушедших сегментов клиентов.</p>
-            </article>
-            <article class="card" style="background:var(--bg2)">
-              <h3><span class="ico"><svg class="i"><use href="#globe"/></svg></span>Продукт, веб-разработка и SEO</h3>
-              <p>Составлял подробные ТЗ для подрядчиков: разработка веб-сайтов, внедрение CRM-систем, SEO-оптимизация и интеграция внешних сервисов.</p>
-            </article>
           </div>
         </div>
       </div>
@@ -328,7 +331,7 @@ footer{padding:28px 0 0;color:var(--muted);font-size:.82rem;text-align:center}
     </div>
     <div class="sub">Языки</div>
     <div class="langs"><span class="tag">Армянский — родной</span><span class="tag">Русский — профессиональный</span><span class="tag">English — intermediate reading</span></div>
-    <footer>© Arman Tsatryan</footer>
+    <footer>© Арман Цатрян</footer>
   </section>
 </main>
 
